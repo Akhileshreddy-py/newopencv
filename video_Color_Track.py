@@ -14,6 +14,8 @@ def detect_color(img2):
     upperb = np.array([ub, ug, ur])
     detect_red_color = cv2.inRange(img2, lowerb, upperb)
     rc = cv2.bitwise_and(img2, img2, mask=detect_red_color)
+    hc=cv2.hconcat([img2,rc])
+    cv2.imshow("horizantal ",hc)
     cv2.imshow("detecting red color", detect_red_color)
     cv2.imshow("red", rc)
 cap=cv2.VideoCapture("color.mp4")
