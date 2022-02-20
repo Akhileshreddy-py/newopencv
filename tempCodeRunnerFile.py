@@ -1,1 +1,1 @@
-nblack[:,:]=[255,230,0]
+ # print("cnts :",cnts[1])
